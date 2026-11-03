@@ -1,0 +1,343 @@
+
+/* email page style for spellaris press added onto from the original halloween page lab activity*/
+/*--Peter Flores,--*/
+/*set the parchment image as the background*/
+html{
+     background-image: url("../images/paperBackground.jpg");
+
+    background-repeat: repeat;
+}
+/* Set the default font for the page */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    width:90%;
+    max-width: 1200px;
+    background-color: #FCF6E9;
+    border: 3px solid #243E9C;
+    box-shadow: 0 9px 18px 9px #8E8372;
+margin:0 auto;
+}
+
+
+/*header styles */
+
+/*gradient fo bottom of the page*/
+header{
+padding: 15px;
+border-bottom: 2px solid #243E9C;
+background-image: linear-gradient(
+45deg, #FCF6E9 0%, #EAB4D9 75%, #F2E8D5 100%
+);
+
+
+/* Float the pumpkin image to the left*/
+}
+header img {
+    float: left;
+}
+
+
+
+/*color: #39362F;  font-style: italic;  text-shadow: 2px 2px 2px black;*/
+
+/*format the main Halloween Store heading*/
+header h2 {
+    font-size: 250%;
+    text-indent: 25px;
+    margin:0;
+}
+
+/* Format the subtitle under the store name */
+header h3 {
+    font-size: 125%;
+    text-indent: 25px;
+    margin:0;
+}
+
+
+/*Main styles*/
+
+/* Clear the floated image before the main content */
+main {
+    clear: left;
+    padding:0 20px 20px 20px;
+
+}
+
+/* Format the main welcome heading */
+main h1 {
+    font-size: 150%;
+}
+
+/* Make the first letter of the welcome heading larger */
+main h1::first-letter {
+    font-size: 200%;
+}
+
+/* Format secondary headings */
+main h2 {
+    font-size: 125%;
+}
+
+/* Increase spacing between list items */
+ul {
+    line-height: 1.5;
+}
+
+
+/*styles for the links*/
+/*make links bold and orange whether visited or not*/
+a:link,
+a:visited {
+    color: #243E9C;
+    font-weight: bold;
+}
+
+/* Change links to green when hovered over or focused */
+a:hover,
+a:focus {
+    color: #E264BD;
+}
+/* top navigation bar */
+#nav_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#nav_menu ul li {
+    list-style-type: none;
+    float: left;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_menu ul li a {
+    display: block;
+    width: 100%;
+    padding: .75em 0;
+    text-align: center;
+    text-decoration: none;
+    background-color: #243E9C;
+    color: #FCF6E9;
+}
+#nav_menu ul li a.current {
+    background-color: #B6CDE0;
+    color: #243E9C;
+}
+
+/* hide the second tier until Decorating Ideas is hovered */
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+    float: none;
+}
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+/* gray background when hovering over a menu link */
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus {
+    background-color: #F2E8D5;
+    color: #243E9C;
+}
+
+/* clear the floats after the navigation menu */
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*side navigation menu list*/
+#nav_list {
+    width: 160px;
+    float: left;
+}
+
+#nav_list ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+#nav_list ul li {
+    width: 120px;
+    margin-bottom: .5em;
+    border: 2px solid #243E9C;
+}
+#nav_list ul li a {
+    display: block;
+    padding: .5em;
+    text-decoration: none;
+    background-color: #243E9C;
+    color: #FCF6E9;
+    font-weight: bold;
+}
+
+/*keep main section next to the navigation list*/
+section {
+    margin-left: 175px;
+}
+
+
+/*footer styles */
+
+/*Reduce footer text size and center it */
+footer {
+    font-size: 80%;
+    text-align: center;
+
+    border-top: 2px solid #243E9C;
+
+    background-image: linear-gradient(
+        45deg,#F2E8D5 0%, #EAB4D9 25%, #FCF6E9 100%
+    );
+    clear: both;
+}
+/*footer spacer*/
+footer p{
+    margin:0;
+    padding:1em 0;
+}
+
+
+
+
+/* Email form formatting */
+section h2 {
+    font-size: 150%;
+    margin-bottom: 0.5em;
+}
+
+form {
+    margin-top: 1em;
+}
+
+/*keep inputs on the row with their labels*/
+form div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+form label {
+    float: none;
+    display: block;
+    flex: 0 0 7em;
+    text-align: right;
+    margin-right: 1em;
+}
+
+form input {
+    width: 20em;
+    box-sizing: border-box;
+}
+
+
+/*sub button*/
+form input[type="submit"] {
+    width: 7em;
+    margin-left: 8em;
+    background-color: #243E9C;
+    color: #FCF6E9;
+    border: 2px solid #243E9C;
+    cursor: pointer;
+}
+form div label {
+    order: 1;
+}
+
+form div input {
+    order: 2;
+}
+
+
+
+
+
+
+
+/*format the header logo*/
+header img {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+
+/*remove the side margin for full width pages*/
+section.full_width {
+    margin-left: 0;
+}
+
+/*make the side navigation boxes wider*/
+#nav_list ul li {
+    width: 140px;
+}
+
+/*style the cream text boxes that hold game content*/
+.placeholder {
+    background-color: #F2E8D5;
+    padding: 12px;
+    border-left: 4px solid #E264BD;
+}
+
+/*format the map link box on the main page*/
+.map_link {
+    background-color: #F2E8D5;
+    border: 1px solid #243E9C;
+    padding: 15px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/*format the map button*/
+a.map_button:link, a.map_button:visited {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #B6CDE0;
+    border: 2px solid #243E9C;
+    color: #243E9C;
+    text-decoration: none;
+}
+
+/*resize the map to fit the page better*/
+.island_map {
+    max-width: 100%;
+    height: auto;
+}
+
+/*format the character bio boxes*/
+.character_entry {
+    min-height: 170px;
+    border: 1px solid #243E9C;
+    background-color: #F2E8D5;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/*format the character name*/
+.character_entry h3 {
+    margin-top: 0;
+}
+
+/* float character images to the left*/
+.character_portrait {
+    float: left;
+    width: 125px;
+    height: 155px;
+    margin-right: 15px;
+    border: 2px solid #243E9C;
+}
+
+/*add spacing between map locations */
+.location_list li {
+    margin-bottom: 12px;
+}
+
